@@ -29,8 +29,7 @@ public class HomeController {
     // URL  http://localhost:8080/employees
     @RequestMapping(value = "/employees",
                     method = RequestMethod.GET,
-                    produces = {MediaType.APPLICATION_JSON_VALUE,
-                    MediaType.APPLICATION_XML_VALUE})
+                    produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public List<Employee> getEmployees() {
         List<Employee> list = employeeDAO.getAllEmployee();
@@ -61,7 +60,7 @@ public class HomeController {
     }
 
     // URL:  http://localhost:8080/employee
-    @RequestMapping(value = "/employee", //
+    @RequestMapping(value = "/employee",
             method = RequestMethod.PUT, //
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
